@@ -47,50 +47,50 @@ export default {
 
   <div
     :class="{ 'opacity-0 -translate-y-60': !show_title }"
-    class="absolute top-8 right-4 bg-gray-400 rounded-2xl py-1 px-2 duration-[1.5s]"
+    class="absolute z-10 top-8 right-4 bg-gray-400 rounded-2xl py-1 px-2 duration-[1.5s]"
   >
     <a href="#" class="mx-2">
       <i
-        class="fab fa-github text-5xl opacity-60 hover:opacity-100 duration-500"
+        class="fab fa-github text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
     <a href="#" class="mx-2">
       <i
-        class="fab fa-youtube text-[2.5rem] opacity-60 hover:opacity-100 duration-500"
+        class="fab fa-youtube text-[2.5rem] md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
     <a href="#" class="mx-2">
       <i
-        class="fab fa-line text-5xl opacity-60 hover:opacity-100 duration-500"
+        class="fab fa-line text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
 
     <a href="#" class="mx-2">
       <i
-        class="fab fa-facebook text-5xl opacity-60 hover:opacity-100 duration-500"
+        class="fab fa-facebook text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
     <a href="#" class="mx-2">
       <i
-        class="fab fa-instagram text-5xl opacity-60 hover:opacity-100 duration-500"
+        class="fab fa-instagram text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
   </div>
   <!-- <div class="absolute w-24 h-12 top-8 left-36 bg-gray-400 rounded-3xl"></div> -->
 
-  <div>
+  <div id="bg">
     <div
-      class="absolute w-64 h-64 -left-20 bg-gray-300/30 rounded-xl rotate-45"
+      class="absolute w-64 h-64 -left-20 bg-gray-300/10 md:bg-gray-300/30 rounded-xl rotate-45"
     ></div>
     <div
-      class="absolute w-64 h-64 -bottom-96 -left-36 bg-gray-300/30 rounded-full rotate-45"
+      class="absolute w-64 h-64 -bottom-96 -left-36 bg-gray-300/10 md:bg-gray-300/30 rounded-full rotate-45"
     ></div>
     <div
       class="absolute w-full border-2 border-gray-400 top-4 bg-gray-400 rounded-3xl"
     ></div>
 
     <div
-      class="absolute w-64 h-24 bottom-0 -right-24 bg-gray-300/30 rounded-xl rotate-45"
+      class="absolute w-64 h-24 bottom-0 -right-24 bg-gray-300/10 md:bg-gray-300/30 rounded-xl rotate-45"
       style=""
     ></div>
   </div>
@@ -98,34 +98,38 @@ export default {
   <!-- <div class="absolute w-24 h-12 top-8 right-4 bg-gray-400 rounded-3xl"></div> -->
 
   <div
-    class="h-screen w-full flex flex-row items-center justify-center space-x-32"
+    class="h-screen w-screen flex md:flex-row flex-col items-center justify-center md:space-x-32"
   >
     <div
-      class="relative shadow-2xl duration-[2s]"
+      class="relative shadow-2xl duration-[2s] mt-52 md:mt-0"
       :class="{ 'opacity-0 -translate-x-60': !show_title }"
     >
       <div
-        class="absolute -right-8 -bottom-10 flex-col space-y-3 font-mono tracking-widest border-8 p-12 border-gray-400 rounded rotate-45"
+        class="absolute scale-50 md:scale-100 -right-8 -bottom-10 flex-col space-y-3 font-mono tracking-widest border-8 p-12 border-gray-400 rounded rotate-45"
       ></div>
       <div
         class="flex flex-col space-y-3 font-mono tracking-widest border-8 p-12 border-gray-400 rounded-lg"
       >
-        <div class="text-8xl text-[#77b55a] font-bold">MCUOSC</div>
-        <div class="text-6xl text-[#77b55a]/80 font">銘傳開源社</div>
+        <div class="text-6xl md:text-8xl text-[#77b55a] font-bold">MCUOSC</div>
+        <div class="text-4xl md:text-6xl text-[#77b55a]/80 font">
+          銘傳開源社
+        </div>
         <div class="line-through text-gray-500 font-bold text-lg">
           不是賣雞排的喔
         </div>
       </div>
     </div>
     <div
-      class="duration-[2s]"
+      class="duration-[2s] md:p-0 p-8"
       :class="{ 'opacity-0 translate-x-60': !show_title }"
     >
       <div class="w-full flex flex-col pb-8">
         <!-- <img src="/logo.png" alt=""> -->
         <div class="font-bold text-gray-50">
-          <div class="text-6xl my-8">嗨，大家好</div>
-          <div class="space-y-4 tracking-widest text-xl text-gray-200">
+          <div class="text-5xl md:text-6xl my-8">嗨，大家好</div>
+          <div
+            class="text-lg md:space-y-4 tracking-widest md:text-xl text-gray-200"
+          >
             <div>你想了解最新的資訊技術嗎 ?</div>
             <div>大學除了讀書也想擁有自己的專案嗎 ?</div>
             <div>這裡聚集了一群對程式有熱情的人們</div>
@@ -146,9 +150,8 @@ export default {
   <div class="h-screen"></div>
   <!-- <Navbar /> -->
   <!-- <router-view /> -->
-
   <div
-    class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+    class="modal fade fixed z-20 top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
     id="exampleModalCenteredScrollable"
     tabindex="-1"
     aria-labelledby="exampleModalCenteredScrollable"
@@ -156,11 +159,12 @@ export default {
     role="dialog"
   >
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable relative w-auto pointer-events-none"
+      class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none px-6"
     >
-      <div class="bg-gray-800 border-4 border-gray-400 rounded-xl p-6">
+    <div class="relative bg-gray-800 border-4 border-gray-400 rounded-xl p-6 md">
+        <button class="absolute top-3 right-5 text-gray-100 text-xl">✖</button>
         <div
-          class="text-gray-200 font-bold tracking-widest select-none text-4xl mb-8 text-center"
+          class="text-gray-200 font-bold tracking-widest select-none text-4xl mt-4 mb-8 text-center"
         >
           入社須知
         </div>
@@ -193,7 +197,9 @@ export default {
           </div>
         </div>
 
-        <div class="text-gray-300 font-bold tracking-widest select-none p-3 text-2xl">
+        <div
+          class="text-gray-300 font-bold tracking-widest select-none p-3 text-2xl"
+        >
           更多資訊 可以透過右上角的社群連結直接聯繫我們喔 !
         </div>
       </div>
