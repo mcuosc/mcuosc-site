@@ -101,7 +101,7 @@ export default {
     class="h-screen w-screen flex md:flex-row flex-col items-center justify-center md:space-x-32"
   >
     <div
-      class="relative shadow-2xl duration-[2s] mt-52 md:mt-0"
+      class="relative shadow-2xl duration-[2s] mt-60 md:mt-0"
       :class="{ 'opacity-0 -translate-x-60': !show_title }"
     >
       <div
