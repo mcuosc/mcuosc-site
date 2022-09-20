@@ -60,28 +60,28 @@ export default {
     :class="{ 'opacity-0 -translate-y-60': !show_title }"
     class="absolute z-10 top-8 right-4 bg-gray-400 rounded-2xl py-1 px-2 duration-[1.5s]"
   >
-    <a href="#" class="mx-2">
+    <a href="https://github.com/mcuosc" target="_blank" class="mx-2">
       <i
         class="fab fa-github text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
-    <a href="#" class="mx-2">
+    <a href="https://www.youtube.com/channel/UC974rN9upz7IJT4s2l80npQ" target="_blank" class="mx-2">
       <i
         class="fab fa-youtube text-[2.5rem] md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
-    <a href="#" class="mx-2">
+    <!-- <a href="#" class="mx-2">
       <i
         class="fab fa-line text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
-    ></a>
+    ></a> -->
 
-    <a href="#" class="mx-2">
+    <a href="https://www.facebook.com/mcuosc/" target="_blank" class="mx-2">
       <i
         class="fab fa-facebook text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
     ></a>
-    <a href="#" class="mx-2">
+    <a href="https://www.instagram.com/mcuosc/" target="_blank" class="mx-2">
       <i
         class="fab fa-instagram text-5xl md:opacity-60 hover:opacity-100 duration-500"
       ></i
