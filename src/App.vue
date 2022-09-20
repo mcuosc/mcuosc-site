@@ -224,7 +224,7 @@ export default {
           入社費用
         </div>
         <div class="text-gray-300 font-bold tracking-widest select-none p-3">
-          <div class="mb-2">每學期 300 元，此收費會被用在</div>
+          <div class="mb-2">每學期 200 元，此收費會被用在</div>
           <div class="ml-4">
             <div>• 社團活動</div>
             <div>• 宣傳費</div>
