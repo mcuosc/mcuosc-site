@@ -6,6 +6,10 @@ export default {
   data() {
     return {
       show_title: false,
+      show_about: {
+        '2019': false,
+        '2020': false,
+      },
       fadeInElements: [],
     }
   },
@@ -15,6 +19,13 @@ export default {
     }, 500)
   },
   methods: {
+    changeAboutShow(year) {
+      for (let key in this.show_about) {
+        if (key === year) this.show_about[key] = true
+        else this.show_about[key] = false
+      }
+    },
+
     handleScroll() {
       for (var i = 0; i < this.fadeInElements.length; i++) {
         var elem = this.fadeInElements[i]
@@ -147,7 +158,31 @@ export default {
     </div>
   </div>
 
-  <div class="h-screen"></div>
+  <div class="flex flex-col w-full items-center justify-center md:px-24 mb-48">
+    <div class="text-4xl font-bold font-mono tracking-widest text-gray-100 self-start mb-12">關於我們</div>
+    <div class="flex flex-row w-full md:px-24">
+      <div class="flex flex-col bg-gray-400 rounded-xl text-gray-800 font-mono text-3xl ">
+        <button @click="changeAboutShow('2019')" class="p-4 hover:bg-gray-500 duration-1000 rounded-xl">2019</button>
+        <button @click="changeAboutShow('2020')" class="p-4 hover:bg-gray-500 duration-1000 rounded-xl">2020</button>
+        <button  @click="changeAboutShow('2021')" class="p-4 hover:bg-gray-500 duration-1000 rounded-xl ">2021</button>
+        <button  @click="changeAboutShow('2022')" class="p-4 hover:bg-gray-500 duration-1000 rounded-xl">2022</button> 
+      </div>
+      <div v-show="this.show_about['2019']">2019</div>
+      <div v-show="this.show_about['2020']"> 2020</div>
+      <div v-show="this.show_about['2021']"> 2021</div>
+      <div v-show="this.show_about['2022']"> 2022</div>
+    </div>
+  </div>
+
+  <div class="flex flex-col w-full items-center justify-center md:px-24 mb-48">
+    <div class="text-4xl font-bold font-mono tracking-widest text-gray-100 self-start">過往社課</div>
+    
+  </div>
+
+  <div class="flex flex-col w-full items-center justify-center md:px-24">
+    <div class="text-4xl font-bold font-mono tracking-widest text-gray-100 self-start">MCU-up(銘傳金手指3.0)</div>
+    <img class="w-6/12" src="https://lh4.googleusercontent.com/GejX74RAGfu6tstjh_7kDkwWrtmNpcXlCeG0nmHRT6ePJn8dNznqOVx710_D95ZL0bEpM4oZow0w2F6WF4k_2iFK0MhKYc3PnHvcsoSp3VDPmxFjJC7cG_h1cRsc6Weg6w=w1280" alt="">
+  </div>
   <!-- <Navbar /> -->
   <!-- <router-view /> -->
   <div
